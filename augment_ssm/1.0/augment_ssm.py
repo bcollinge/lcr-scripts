@@ -110,7 +110,7 @@ def get_read_support(chrom,start,end,ref_base,alt_base,bamfile,mut_class,min_bas
     realname = str(Path(bamfile).resolve())
     #print(realname)
     if realname.endswith("cram"):
-        samfile = pysam.AlignmentFile(realname,'rc')
+        samfile = pysam.AlignmentFile(bamfile,'rc')
     else:
         samfile = pysam.AlignmentFile(bamfile,'rb')
     read_bases = {}
